@@ -1,7 +1,5 @@
-# Welcome to streamlit
+# QR Code Generator
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+This app can generate a QR Code as the users input an URL.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+Just as simple as you think!
