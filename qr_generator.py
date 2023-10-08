@@ -29,7 +29,7 @@ def create_qr_code(url, logo=None):
             img.paste(logo, pos)
             qr.make(fit = True)
         # save img 
-        img.save(qr_name)
+        #img.save(qr_name)
         qr_image = Image.open('qrcode.png')
         get_img(qr_image)
     else:
