@@ -38,6 +38,14 @@ def create_qr_code(url, logo=None):
     return qr_name
 
 
+def get_img(file_name):
+    st.image(file_name, width=300)
+
+
+def disp_message():
+    st.markdown("<p style='color: red; font-size: 13px;'>Please enter an URL</p>", unsafe_allow_html=True)
+
+
 def create_app_instance(title):
     st.title(title)
     url = st.text_input(label='Enter URL', placeholder=placeholder)
@@ -45,13 +53,10 @@ def create_app_instance(title):
     img_name = create_qr_code(url, userimg)
     if os.path.isfile(img_name):
         img = open(img_name,'rb')
+    if bool(url):
         st.download_button(label='Download', data=img, file_name='img.png', mime="image/png")
-
-
-def get_img(file_name):
-    st.image(file_name, width=300)
-    
-
+    else:
+        st.button(label='Download', on_click=disp_message)
 
 
 # The Actuation
